@@ -26,6 +26,11 @@
     margin-bottom: 2rem;
 }
 
+#interrogant{
+    border-radius: 50%;
+    border: 2px solid black;
+}
+
 /* ////// MID-SECTION ////// */
 
 #mid-section{
@@ -37,11 +42,8 @@
     margin: 1em;
     padding-left: 20px;
     padding-right: 20px; 
-    border-radius: 20%;   
-}
-
-.hand-options:hover{
-    background-color: tomato;
+    border-radius: 50%;   
+    border: 2px solid black;
 }
 
 /* ////// LOWER-SECTION ////// */
@@ -61,7 +63,6 @@
 .result-titles{
     display: flex;
     margin: 1rem;
-
 }
 
 .result-container1{

@@ -78,8 +78,12 @@ function renderCounter(){
 
 function changeBackground(idHandoption){
     document.getElementById(idHandoption).style.backgroundColor = "#fc9831";
+    interrogant.style.backgroundColor = "#fc9831";
+    interrogant.style.borderRadius = "50%";
     setTimeout(() => {
         document.getElementById(idHandoption).style.backgroundColor = "#fdc48a";
+        interrogant.style.backgroundColor = "#fdc48a";
+        
     },1500);
 }
 
