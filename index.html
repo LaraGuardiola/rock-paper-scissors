@@ -1,0 +1,38 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tourney:ital,wght@1,800&display=swap" rel="stylesheet">
+    <title>Piedra, papel o tijera</title>
+</head>
+<body>
+    <div class="mainspace">
+        <section id="upper-section">
+            <div id="interrogant"><img id="random-result" src="./img/interrogante.png"></div>
+        </section>
+        <section id="mid-section">
+            <div class="hand-options" id="rock" onclick="seleccionMano(this.id);changeBackground(this.id)"><img src="./img/rock.png"></div>
+            <div class="hand-options" id="paper" onclick="seleccionMano(this.id);changeBackground(this.id)"><img src="./img/paper.png"></div>
+            <div class="hand-options" id="scissors" onclick="seleccionMano(this.id);changeBackground(this.id)"><img src="./img/scissors.png"></div>
+        </section>
+        <section id="lower-section">
+            <div id="actual-result"></div>
+            <div class="result-titles">
+                <span class="result-container1">VICTORIAS</span>
+                <span class="result-container1">EMPATES</span>
+                <span class="result-container1">DERROTAS</span>
+            </div>
+            <div class="result-titles">
+                <p class="result-container2" id="victorias"></p>
+                <p class="result-container2" id="empates"></p>
+                <p class="result-container2" id="derrotas"></p>
+            </div>
+        </section>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

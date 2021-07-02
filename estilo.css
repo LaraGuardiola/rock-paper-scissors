@@ -1,0 +1,77 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Tourney', cursive;
+}
+
+/* ///// MAINSPACE ///// */
+
+.mainspace{
+    background-color: #fdc48a;
+    width: 90%;
+    margin: 5%;
+    padding: 5%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 5%;
+}
+
+/* ////// UPPER-SECTION ////// */
+
+#upper-section{
+    margin-bottom: 2rem;
+}
+
+/* ////// MID-SECTION ////// */
+
+#mid-section{
+    display: flex;
+    margin-bottom: 2rem;
+}
+
+.hand-options{
+    margin: 1em;
+    padding-left: 20px;
+    padding-right: 20px; 
+    border-radius: 20%;   
+}
+
+.hand-options:hover{
+    background-color: tomato;
+}
+
+/* ////// LOWER-SECTION ////// */
+
+#lower-section{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 2rem;
+}
+
+#actual-result{
+    margin-bottom: 2rem;
+    font-size: 40pt;
+}
+
+.result-titles{
+    display: flex;
+    margin: 1rem;
+
+}
+
+.result-container1{
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 20pt;
+}
+
+.result-container2{
+    padding-left: 75px;
+    padding-right: 75px;
+    font-size: 24pt;
+}
