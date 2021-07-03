@@ -4,12 +4,12 @@ const tijera = document.querySelector('#scissors');
 const interrogant = document.querySelector('#random-result');
 const actualResult = document.querySelector('#actual-result');
 var wincounter = 0, losecounter = 0, drawcounter = 0; 
+var bloqueo = false;
 const manos = ["./img/rock.png","./img/paper.png","./img/scissors.png"];
 
 function seleccionMano(manoID){
     interrogant.src = manos[Math.floor(Math.random() * manos.length)];
     handleOptions(manoID);
-    //vuelve a cambiar al src al cabo de 1500 milisegundos para volver a poner el interrogante de imagen
     setTimeout(() => {
         interrogant.src = "./img/interrogante.png";
     },1500);
@@ -76,14 +76,23 @@ function renderCounter(){
     document.querySelector('#derrotas').innerHTML = losecounter;
 }
 
-function changeBackground(idHandoption){
-    document.getElementById(idHandoption).style.backgroundColor = "#fc9831";
+function changeBackground(manoID){
+    document.getElementById(manoID).style.backgroundColor = "#fc9831";
     interrogant.style.backgroundColor = "#fc9831";
     interrogant.style.borderRadius = "50%";
     setTimeout(() => {
-        document.getElementById(idHandoption).style.backgroundColor = "#fdc48a";
+        document.getElementById(manoID).style.backgroundColor = "#fdc48a";
         interrogant.style.backgroundColor = "#fdc48a";
-        
-    },1500);
+    },2000);
 }
 
+function init(manoID){
+    if(!bloqueo){
+        bloqueo = true;
+        changeBackground(manoID);
+        seleccionMano(manoID);
+        setTimeout(() => {
+            bloqueo = false;
+        },2000);
+    }
+}
