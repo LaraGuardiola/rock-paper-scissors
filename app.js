@@ -3,8 +3,8 @@ const papel = document.querySelector('#paper');
 const tijera = document.querySelector('#scissors');
 const interrogant = document.querySelector('#random-result');
 const actualResult = document.querySelector('#actual-result');
-var wincounter = 0, losecounter = 0, drawcounter = 0; 
-var bloqueo = false;
+let wincounter = 0, losecounter = 0, drawcounter = 0; 
+let bloqueo = false;
 const manos = ["./img/rock.png","./img/paper.png","./img/scissors.png"];
 
 function seleccionMano(manoID){
@@ -12,7 +12,7 @@ function seleccionMano(manoID){
     handleOptions(manoID);
     setTimeout(() => {
         interrogant.src = "./img/interrogante.png";
-    },1500);
+    },2000);
 };
 
 function handleRock(manoID){
@@ -86,9 +86,17 @@ function changeBackground(manoID){
     },2000);
 }
 
+function isGameBlocked(){
+    return bloqueo;
+}
+
+function blockGame(){
+    bloqueo = true;
+}
+
 function init(manoID){
-    if(!bloqueo){
-        bloqueo = true;
+    if(!isGameBlocked()){
+        blockGame();
         changeBackground(manoID);
         seleccionMano(manoID);
         setTimeout(() => {
