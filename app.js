@@ -16,15 +16,15 @@ function seleccionMano(manoID){
 };
 
 function handleRock(manoID){
-    if (interrogant.src === "file:///C:/Users/Sergio/Desktop/piedra-papel-tijera/img/rock.png" && manoID === "paper"){                //1
+    if (interrogant.src.includes('rock') && manoID === "paper"){                //1
         wincounter++;
         actualResult.style.color = "green";
         actualResult.innerHTML = "¡HAS GANADO!"
-    }else if(interrogant.src === "file:///C:/Users/Sergio/Desktop/piedra-papel-tijera/img/rock.png" && manoID === "rock"){           //2         
+    }else if(interrogant.src.includes('rock') && manoID === "rock"){           //2         
         drawcounter++;
         actualResult.style.color = "blue";
         actualResult.innerHTML = "¡HAS EMPATADO!"
-    }else if(interrogant.src === "file:///C:/Users/Sergio/Desktop/piedra-papel-tijera/img/rock.png" && manoID === "scissors"){        //3
+    }else if(interrogant.src.includes('rock') && manoID === "scissors"){        //3
         losecounter++;
         actualResult.style.color = "red";
         actualResult.innerHTML = "¡HAS PERDIDO!"
@@ -32,15 +32,15 @@ function handleRock(manoID){
 }
 
 function handlePaper(manoID){
-    if(interrogant.src === "file:///C:/Users/Sergio/Desktop/piedra-papel-tijera/img/paper.png" && manoID === "scissors"){        //4
+    if(interrogant.src.includes('paper') && manoID === "scissors"){        //4
         wincounter++;
         actualResult.style.color = "green";
         actualResult.innerHTML = "¡HAS GANADO!"
-    }else if(interrogant.src === "file:///C:/Users/Sergio/Desktop/piedra-papel-tijera/img/paper.png" && manoID === "paper"){       //5
+    }else if(interrogant.src.includes('paper') && manoID === "paper"){       //5
         drawcounter++;
         actualResult.style.color = "blue";
         actualResult.innerHTML = "¡HAS EMPATADO!"
-    }else if(interrogant.src === "file:///C:/Users/Sergio/Desktop/piedra-papel-tijera/img/paper.png" && manoID === "rock"){           //6
+    }else if(interrogant.src.includes('paper') && manoID === "rock"){           //6
         losecounter++;
         actualResult.style.color = "red";
         actualResult.innerHTML = "¡HAS PERDIDO!"
@@ -48,15 +48,15 @@ function handlePaper(manoID){
 }
 
 function handleScissors(manoID){
-    if(interrogant.src === "file:///C:/Users/Sergio/Desktop/piedra-papel-tijera/img/scissors.png" && manoID === "rock"){    //7
+    if(interrogant.src.includes('scissors') && manoID === "rock"){    //7
         wincounter++;
         actualResult.style.color = "green";
         actualResult.innerHTML = "¡HAS GANADO!"
-    }else if(interrogant.src === "file:///C:/Users/Sergio/Desktop/piedra-papel-tijera/img/scissors.png" && manoID === "scissors"){        //8
+    }else if(interrogant.src.includes('scissors') && manoID === "scissors"){        //8
         drawcounter++;
         actualResult.style.color = "blue";
         actualResult.innerHTML = "¡HAS EMPATADO!"
-    }else if(interrogant.src === "file:///C:/Users/Sergio/Desktop/piedra-papel-tijera/img/scissors.png" && manoID === "paper"){    //9
+    }else if(interrogant.src.includes('scissors') && manoID === "paper"){    //9
         losecounter++;
         actualResult.style.color = "red";
         actualResult.innerHTML = "¡HAS PERDIDO!"
