@@ -16,15 +16,15 @@ function seleccionMano(manoID){
 }
 
 function handleRock(manoID){
-    if (interrogant.src.includes('scissors') && manoID === "rock"){                //1
+    if (interrogant.src.includes('scissors.png') && manoID === "rock"){                //1
         wincounter++
         actualResult.style.color = "green"
         actualResult.innerHTML = "¡HAS GANADO!"
-    }else if(interrogant.src.includes('rock') && manoID === "rock"){           //2         
+    }else if(interrogant.src.includes('rock.png') && manoID === "rock"){           //2         
         drawcounter++
         actualResult.style.color = "blue"
         actualResult.innerHTML = "¡HAS EMPATADO!"
-    }else if(interrogant.src.includes('paper') && manoID === "rock"){        //3
+    }else if(interrogant.src.includes('paper.png') && manoID === "rock"){        //3
         losecounter++
         actualResult.style.color = "red"
         actualResult.innerHTML = "¡HAS PERDIDO!"
@@ -32,15 +32,15 @@ function handleRock(manoID){
 }
 
 function handlePaper(manoID){
-    if(interrogant.src.includes('rock') && manoID === "paper"){        //4
+    if(interrogant.src.includes('rock.png') && manoID === "paper"){        //4
         wincounter++
         actualResult.style.color = "green"
         actualResult.innerHTML = "¡HAS GANADO!"
-    }else if(interrogant.src.includes('paper') && manoID === "paper"){       //5
+    }else if(interrogant.src.includes('paper.png') && manoID === "paper"){       //5
         drawcounter++
         actualResult.style.color = "blue"
         actualResult.innerHTML = "¡HAS EMPATADO!"
-    }else if(interrogant.src.includes('scissors') && manoID === "paper"){           //6
+    }else if(interrogant.src.includes('scissors.png') && manoID === "paper"){           //6
         losecounter++
         actualResult.style.color = "red"
         actualResult.innerHTML = "¡HAS PERDIDO!"
@@ -48,15 +48,15 @@ function handlePaper(manoID){
 }
 
 function handleScissors(manoID){
-    if(interrogant.src.includes('paper') && manoID === "scissors"){    //7
+    if(interrogant.src.includes('paper.png') && manoID === "scissors"){    //7
         wincounter++
         actualResult.style.color = "green"
         actualResult.innerHTML = "¡HAS GANADO!"
-    }else if(interrogant.src.includes('scissors') && manoID === "scissors"){        //8
+    }else if(interrogant.src.includes('scissors.png') && manoID === "scissors"){        //8
         drawcounter++
         actualResult.style.color = "blue"
         actualResult.innerHTML = "¡HAS EMPATADO!"
-    }else if(interrogant.src.includes('rock') && manoID === "scissors"){    //9
+    }else if(interrogant.src.includes('rock.png') && manoID === "scissors"){    //9
         losecounter++
         actualResult.style.color = "red"
         actualResult.innerHTML = "¡HAS PERDIDO!"
@@ -87,7 +87,6 @@ function renderCounter(){
 function changeBackground(manoID){
     document.getElementById(manoID).style.backgroundColor = "#fc9831"
     interrogant.style.backgroundColor = "#fc9831"
-    interrogant.style.borderRadius = "50%"
     setTimeout(() => {
         document.getElementById(manoID).style.backgroundColor = "#fdc48a"
         interrogant.style.backgroundColor = "#fdc48a"
