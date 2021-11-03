@@ -82,6 +82,7 @@
     /* ////// MID-SECTION ////// */
 
     .hand-options{
+        margin: 0.08em;
         padding-left: 5px;
         padding-right: 5px; 
     }
@@ -95,12 +96,12 @@
     .result-container1{
         padding-left: 8px;
         padding-right: 8px;
-        font-size: 20pt;
+        font-size: 14pt;
     }
     
     .result-container2{
-        padding-left: 65px;
-        padding-right: 65px;
+        padding-left: 45px;
+        padding-right: 45px;
         font-size: 20pt;
     }
 }
