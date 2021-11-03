@@ -86,6 +86,7 @@ function renderCounter(){
 
 function changeBackground(manoID){
     document.getElementById(manoID).style.backgroundColor = "#fc9831"
+    interrogant.style.borderRadius = "50%"
     interrogant.style.backgroundColor = "#fc9831"
     setTimeout(() => {
         document.getElementById(manoID).style.backgroundColor = "#fdc48a"
