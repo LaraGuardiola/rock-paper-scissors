@@ -4,14 +4,14 @@ const tijera = document.querySelector('#scissors')
 const interrogant = document.querySelector('#random-result')
 const actualResult = document.querySelector('#actual-result')
 let wincounter = 0, losecounter = 0, drawcounter = 0 
-let bloqueo = false
-const manos = ["./img/rock.png","./img/paper.png","./img/scissors.png"]
+let block = false
+const hands = ["./img/rock.png","./img/paper.png","./img/scissors.png"]
 
-function seleccionMano(manoID){
-    interrogant.src = manos[Math.floor(Math.random() * manos.length)]
+function handSelection(manoID){
+    interrogant.src = hands[Math.floor(Math.random() * hands.length)]
     handleOptions(manoID)
     setTimeout(() => {
-        interrogant.src = "./img/interrogante.png"
+        interrogant.src = "./img/interrogant.png"
     },2000)
 }
 
@@ -79,9 +79,9 @@ function handleOptions(manoID){
 }
 
 function renderCounter(){
-    document.querySelector('#victorias').innerHTML = wincounter
-    document.querySelector('#empates').innerHTML = drawcounter
-    document.querySelector('#derrotas').innerHTML = losecounter
+    document.querySelector('#victories').innerHTML = wincounter
+    document.querySelector('#draws').innerHTML = drawcounter
+    document.querySelector('#defeats').innerHTML = losecounter
 }
 
 function changeBackground(manoID){
@@ -95,20 +95,20 @@ function changeBackground(manoID){
 }
 
 function isGameBlocked(){
-    return bloqueo
+    return block
 }
 
 function blockGame(){
-    bloqueo = true
+    block = true
 }
 
 function init(manoID){
     if(!isGameBlocked()){
         blockGame()
         changeBackground(manoID)
-        seleccionMano(manoID)
+        handSelection(manoID)
         setTimeout(() => {
-            bloqueo = false
+            block = false
         },2000)
     }
 }
